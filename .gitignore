@@ -1,0 +1,9 @@
+.DS_Store
+**/.pio/
+**/.vscode/
+**/__pycache__/
+*.pyc
+
+# Deployment credentials stay on the local machine.
+**/include/network_config.h
+**/include/config.h

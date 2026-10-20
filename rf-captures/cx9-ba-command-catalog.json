@@ -1,0 +1,74 @@
+{
+  "device": "humanex-cx9-ba-monitor-light",
+  "transport": "rf433-ask-ook",
+  "carrier_hz_hypothesis": 433920000,
+  "carrier_measurement_status": "not_measured_with_sdr_or_spectrum_analyzer",
+  "protocol_classification": "static_24_bit_code",
+  "encoding": {
+    "type": "pulse-width",
+    "bit_count": 24,
+    "zero": {
+      "high_us": 173,
+      "low_us": 547
+    },
+    "one": {
+      "high_us": 513,
+      "low_us": 202
+    },
+    "frame_gap_us": 3149,
+    "replay_repeats": 5
+  },
+  "commands": {
+    "power_toggle": {
+      "bits": "000101100010101001011110",
+      "hex": "162A5E",
+      "sample_support": "10/10",
+      "cross_action_occurrences": 0,
+      "semantics": "toggle; separate on and off codes are not observed",
+      "zero_bits": 13,
+      "one_bits": 11,
+      "active_frame_us": 17225,
+      "five_repeat_transmit_us": 98721
+    },
+    "brightness_cw": {
+      "bits": "000101100010101010101010",
+      "hex": "162AAA",
+      "sample_support": "10/10"
+    },
+    "brightness_ccw": {
+      "bits": "000101100010101001011101",
+      "hex": "162A5D",
+      "sample_support": "10/10"
+    },
+    "cct_cw": {
+      "bits": "000101100010101010101111",
+      "hex": "162AAF",
+      "sample_support": "10/10",
+      "decoded_occurrences": 15,
+      "cross_action_occurrences": 0
+    },
+    "cct_ccw": {
+      "bits": "000101100010101001011111",
+      "hex": "162A5F",
+      "sample_support": "9/10",
+      "decoded_occurrences": 14,
+      "cross_action_occurrences": 0,
+      "note": "cct_ccw_01 contains no complete decodable frame; samples 02-10 agree"
+    },
+    "preset_s1": {
+      "bits": "000101100010101011000101",
+      "hex": "162AC5",
+      "sample_support": "10/10"
+    },
+    "preset_s2": {
+      "bits": "000101100010101001011011",
+      "hex": "162A5B",
+      "sample_support": "10/10"
+    },
+    "preset_s3": {
+      "bits": "000101100010101010100101",
+      "hex": "162AA5",
+      "sample_support": "10/10"
+    }
+  }
+}
